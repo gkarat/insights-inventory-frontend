@@ -9,6 +9,7 @@ const { config: webpackConfig, plugins } = config({
     ...process.env.PROXY && {
         https: true,
         useProxy: true,
+        useCloud: true,
         proxyVerbose: true,
         appUrl: process.env.BETA ? '/beta/insights/inventory' : '/insights/inventory'
     }
@@ -41,6 +42,16 @@ webpackConfig.resolve.alias = {
     'html-webpack-plugin': resolve(__dirname, '../node_modules/html-webpack-plugin'),
     reactRedux: resolve(__dirname, '../node_modules/react-redux')
 };
+
+webpackConfig.module.rules = [
+    ...webpackConfig.module.rules,
+    {
+        test: /\.m?js/,
+        resolve: {
+            fullySpecified: false
+        }
+    }
+];
 
 module.exports = {
     ...webpackConfig,
