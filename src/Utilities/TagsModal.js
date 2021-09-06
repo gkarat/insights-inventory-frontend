@@ -110,7 +110,7 @@ const TagsModal = ({
                     }
                 }
             ]}
-            onUpdateData={ fetchTags }
+            onUpdateData={ (pagination) => fetchTags(pagination, filterBy) }
             columns={ [
                 { title: 'Name' },
                 { title: 'Value', transforms: [cellWidth(30)] },
@@ -121,6 +121,7 @@ const TagsModal = ({
                 selected,
                 onApply: () => onApply && onApply(selected)
             }}
+            bulkSelect={{ id: 'bulk-select-tags' }}
             title={ activeSystemTag ?
                 `${activeSystemTag.display_name} (${tagsCount})` :
                 `All tags in inventory (${tagsCount})`
