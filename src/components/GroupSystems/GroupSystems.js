@@ -8,7 +8,7 @@ import { clearFilters, selectEntity } from '../../store/inventory-actions';
 import AddSystemsToGroupModal from '../InventoryGroups/Modals/AddSystemsToGroupModal';
 import InventoryTable from '../InventoryTable/InventoryTable';
 import { Link } from 'react-router-dom';
-import { updateURLSearchParams } from '../../Utilities/URLSearchParams';
+import { readURLSearchParams, updateURLSearchParams } from '../../Utilities/URLSearchParams';
 import { useWritePermissions } from '../../Utilities/constants';
 import RemoveHostsFromGroupModal from '../InventoryGroups/Modals/RemoveHostsFromGroupModal';
 
@@ -84,8 +84,9 @@ const mapTags = ({ category, values }) => values.map(({ tagKey, value }) => `${
 }`);
 
 import flatMap from 'lodash/flatMap';
+import { useLocation } from 'react-router-dom';
 
-const groupSystemsTableFiltersConfig = {
+const groupSystemsTableFiltersConfig = { // TODO: apply on InventoryTable
     name: {
         paramName: 'hostname_or_id'
     },
@@ -136,6 +137,7 @@ const GroupSystems = ({ groupName, groupId }) => {
     const [removeHostsFromGroupModalOpen, setRemoveHostsFromGroupModalOpen] = useState(false);
     const [currentSystem, setCurrentSystem] = useState([]);
     const inventory = useRef(null);
+    const location = useLocation();
 
     const selected = useSelector(
         (state) => state?.entities?.selected || new Map()
@@ -153,6 +155,23 @@ const GroupSystems = ({ groupName, groupId }) => {
         dispatch(clearFilters());
         dispatch(selectEntity(-1, false));
     };
+
+    console.log(inventory.current);
+
+    useEffect(() => {
+        const params = readURLSearchParams(location.search, groupSystemsTableFiltersConfig);
+        const pagination = { per_page: params.per_page, page: params.page };
+        const filters = Object.entries(params).reduce((prev, [filterKey, filterValue]) => {
+            if (!['per_page', 'page'].includes(filterKey)) {
+                return [...prev, { [filterKey]: filterValue }];
+            }
+
+            return prev;
+        }, []);
+        console.log('###', params, filters, pagination);
+        inventory.current.onRefreshData({ ...pagination, filters }, false, true);
+
+    }, [inventory]);
 
     useEffect(() => {
         return () => {
