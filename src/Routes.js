@@ -46,9 +46,10 @@ export const AccountStatContext = createContext({
 });
 
 export const Routes = () => {
-  const [hasConventionalSystems, setHasConventionalSystems] = useState(true);
-  const [hasEdgeDevices, setHasEdgeDevices] = useState(true);
+  const [hasConventionalSystems, setHasConventionalSystems] = useState(false);
+  const [hasEdgeDevices, setHasEdgeDevices] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const edgeParityInventoryListEnabled = useFeatureFlag(
     'edgeParity.inventory-list'
@@ -57,9 +58,9 @@ export const Routes = () => {
   const stalenessAndDeletionEnabled = useFeatureFlag('hbi.custom-staleness');
 
   useEffect(() => {
-    // zero state check
-    try {
-      (async () => {
+    // zero state (no hosts) check
+    (async () => {
+      try {
         const hasConventionalSystems = await inventoryHasConventionalSystems();
         setHasConventionalSystems(hasConventionalSystems);
 
@@ -67,12 +68,13 @@ export const Routes = () => {
           const hasEdgeSystems = await inventoryHasEdgeSystems();
           setHasEdgeDevices(hasEdgeSystems);
         }
+      } catch (error) {
+        console.error(error);
+        setError(error);
+      }
 
-        setIsLoading(false);
-      })();
-    } catch (e) {
-      console.error(e);
-    }
+      setIsLoading(false);
+    })();
   }, []);
 
   let element = useRoutes([
@@ -120,6 +122,11 @@ export const Routes = () => {
 
   if (isLoading) {
     return <Fallback />;
+  }
+
+  if (error !== null && error.response.status !== 403) {
+    // no permissions (403) are accepted, empty state will be rendered by individual routes
+    return <ErrorState />;
   }
 
   return !hasSystems ? (
