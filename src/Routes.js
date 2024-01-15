@@ -8,13 +8,12 @@ import React, {
 import { Navigate, useRoutes } from 'react-router-dom';
 import RenderWrapper from './Utilities/Wrapper';
 import useFeatureFlag from './Utilities/useFeatureFlag';
+import { Bullseye, Spinner } from '@patternfly/react-core';
 import LostPage from './components/LostPage';
 import AsyncComponent from '@redhat-cloud-services/frontend-components/AsyncComponent';
 import ErrorState from '@redhat-cloud-services/frontend-components/ErrorState';
 import { inventoryHasEdgeSystems } from './Utilities/edge';
 import { inventoryHasConventionalSystems } from './Utilities/conventional';
-import Fallback from './components/SpinnerFallback';
-
 const InventoryOrEdgeGroupDetailsView = lazy(() =>
   import('./routes/InventoryOrEdgeGroupDetailsComponent')
 );
@@ -48,8 +47,6 @@ export const AccountStatContext = createContext({
 export const Routes = () => {
   const [hasConventionalSystems, setHasConventionalSystems] = useState(true);
   const [hasEdgeDevices, setHasEdgeDevices] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
-
   const edgeParityInventoryListEnabled = useFeatureFlag(
     'edgeParity.inventory-list'
   );
@@ -67,8 +64,6 @@ export const Routes = () => {
           const hasEdgeSystems = await inventoryHasEdgeSystems();
           setHasEdgeDevices(hasEdgeSystems);
         }
-
-        setIsLoading(false);
       })();
     } catch (e) {
       console.error(e);
@@ -118,12 +113,14 @@ export const Routes = () => {
     ? hasEdgeDevices || hasConventionalSystems
     : hasConventionalSystems;
 
-  if (isLoading) {
-    return <Fallback />;
-  }
-
   return !hasSystems ? (
-    <Suspense fallback={<Fallback />}>
+    <Suspense
+      fallback={
+        <Bullseye>
+          <Spinner size="xl" />
+        </Bullseye>
+      }
+    >
       <AsyncComponent
         appId={'inventory_zero_state'}
         appName="dashboard"
