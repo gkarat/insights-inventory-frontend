@@ -42,12 +42,14 @@ exports[`ConfigurationCard should render correctly - no data 1`] = `
               class=""
             >
               <dt
+                aria-label="Installed packages title"
                 class=""
                 data-ouia-component-id="Installed packages title"
               >
                 Installed packages
               </dt>
               <dd
+                aria-label="Installed packages value"
                 class=""
                 data-ouia-component-id="Installed packages value"
               >
@@ -60,12 +62,14 @@ exports[`ConfigurationCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Services title"
                 class=""
                 data-ouia-component-id="Services title"
               >
                 Services
               </dt>
               <dd
+                aria-label="Services value"
                 class=""
                 data-ouia-component-id="Services value"
               >
@@ -78,12 +82,14 @@ exports[`ConfigurationCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Running processes title"
                 class=""
                 data-ouia-component-id="Running processes title"
               >
                 Running processes
               </dt>
               <dd
+                aria-label="Running processes value"
                 class=""
                 data-ouia-component-id="Running processes value"
               >
@@ -96,12 +102,14 @@ exports[`ConfigurationCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Repositories title"
                 class=""
                 data-ouia-component-id="Repositories title"
               >
                 Repositories
               </dt>
               <dd
+                aria-label="Repositories value"
                 class=""
                 data-ouia-component-id="Repositories value"
               >
@@ -164,12 +172,14 @@ exports[`ConfigurationCard should render correctly with data 1`] = `
               class=""
             >
               <dt
+                aria-label="Installed packages title"
                 class=""
                 data-ouia-component-id="Installed packages title"
               >
                 Installed packages
               </dt>
               <dd
+                aria-label="Installed packages value"
                 class=""
                 data-ouia-component-id="Installed packages value"
               >
@@ -182,12 +192,14 @@ exports[`ConfigurationCard should render correctly with data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Services title"
                 class=""
                 data-ouia-component-id="Services title"
               >
                 Services
               </dt>
               <dd
+                aria-label="Services value"
                 class=""
                 data-ouia-component-id="Services value"
               >
@@ -200,12 +212,14 @@ exports[`ConfigurationCard should render correctly with data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Running processes title"
                 class=""
                 data-ouia-component-id="Running processes title"
               >
                 Running processes
               </dt>
               <dd
+                aria-label="Running processes value"
                 class=""
                 data-ouia-component-id="Running processes value"
               >
@@ -218,12 +232,14 @@ exports[`ConfigurationCard should render correctly with data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Repositories title"
                 class=""
                 data-ouia-component-id="Repositories title"
               >
                 Repositories
               </dt>
               <dd
+                aria-label="Repositories value"
                 class=""
                 data-ouia-component-id="Repositories value"
               >
@@ -286,12 +302,14 @@ exports[`ConfigurationCard should render enabled/disabled 1`] = `
               class=""
             >
               <dt
+                aria-label="Installed packages title"
                 class=""
                 data-ouia-component-id="Installed packages title"
               >
                 Installed packages
               </dt>
               <dd
+                aria-label="Installed packages value"
                 class=""
                 data-ouia-component-id="Installed packages value"
               >
@@ -304,12 +322,14 @@ exports[`ConfigurationCard should render enabled/disabled 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Services title"
                 class=""
                 data-ouia-component-id="Services title"
               >
                 Services
               </dt>
               <dd
+                aria-label="Services value"
                 class=""
                 data-ouia-component-id="Services value"
               >
@@ -322,12 +342,14 @@ exports[`ConfigurationCard should render enabled/disabled 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Running processes title"
                 class=""
                 data-ouia-component-id="Running processes title"
               >
                 Running processes
               </dt>
               <dd
+                aria-label="Running processes value"
                 class=""
                 data-ouia-component-id="Running processes value"
               >
@@ -340,12 +362,14 @@ exports[`ConfigurationCard should render enabled/disabled 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Repositories title"
                 class=""
                 data-ouia-component-id="Repositories title"
               >
                 Repositories
               </dt>
               <dd
+                aria-label="Repositories value"
                 class=""
                 data-ouia-component-id="Repositories value"
               >
@@ -408,12 +432,14 @@ exports[`ConfigurationCard should render extra 1`] = `
               class=""
             >
               <dt
+                aria-label="Installed packages title"
                 class=""
                 data-ouia-component-id="Installed packages title"
               >
                 Installed packages
               </dt>
               <dd
+                aria-label="Installed packages value"
                 class=""
                 data-ouia-component-id="Installed packages value"
               >
@@ -426,12 +452,14 @@ exports[`ConfigurationCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Services title"
                 class=""
                 data-ouia-component-id="Services title"
               >
                 Services
               </dt>
               <dd
+                aria-label="Services value"
                 class=""
                 data-ouia-component-id="Services value"
               >
@@ -444,12 +472,14 @@ exports[`ConfigurationCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Running processes title"
                 class=""
                 data-ouia-component-id="Running processes title"
               >
                 Running processes
               </dt>
               <dd
+                aria-label="Running processes value"
                 class=""
                 data-ouia-component-id="Running processes value"
               >
@@ -462,12 +492,14 @@ exports[`ConfigurationCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Repositories title"
                 class=""
                 data-ouia-component-id="Repositories title"
               >
                 Repositories
               </dt>
               <dd
+                aria-label="Repositories value"
                 class=""
                 data-ouia-component-id="Repositories value"
               >
@@ -480,24 +512,28 @@ exports[`ConfigurationCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="something title"
                 class=""
                 data-ouia-component-id="something title"
               >
                 something
               </dt>
               <dd
+                aria-label="something value"
                 class=""
                 data-ouia-component-id="something value"
               >
                 test
               </dd>
               <dt
+                aria-label="with click title"
                 class=""
                 data-ouia-component-id="with click title"
               >
                 with click
               </dt>
               <dd
+                aria-label="with click value"
                 class=""
                 data-ouia-component-id="with click value"
               >

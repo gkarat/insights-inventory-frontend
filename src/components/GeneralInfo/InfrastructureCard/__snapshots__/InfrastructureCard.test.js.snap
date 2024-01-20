@@ -42,36 +42,42 @@ exports[`InfrastructureCard should not render hasIPv4 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -84,12 +90,14 @@ exports[`InfrastructureCard should not render hasIPv4 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -152,36 +160,42 @@ exports[`InfrastructureCard should not render hasIPv6 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -194,12 +208,14 @@ exports[`InfrastructureCard should not render hasIPv6 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -262,36 +278,42 @@ exports[`InfrastructureCard should not render hasInterfaces 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -304,12 +326,14 @@ exports[`InfrastructureCard should not render hasInterfaces 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -372,24 +396,28 @@ exports[`InfrastructureCard should not render hasType 1`] = `
               class=""
             >
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -402,12 +430,14 @@ exports[`InfrastructureCard should not render hasType 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -420,12 +450,14 @@ exports[`InfrastructureCard should not render hasType 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -488,24 +520,28 @@ exports[`InfrastructureCard should not render hasVendor 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -518,12 +554,14 @@ exports[`InfrastructureCard should not render hasVendor 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -536,12 +574,14 @@ exports[`InfrastructureCard should not render hasVendor 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -604,12 +644,14 @@ exports[`InfrastructureCard should render correctly - no data 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
@@ -622,12 +664,14 @@ exports[`InfrastructureCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
@@ -640,12 +684,14 @@ exports[`InfrastructureCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -658,12 +704,14 @@ exports[`InfrastructureCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -676,12 +724,14 @@ exports[`InfrastructureCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -744,36 +794,42 @@ exports[`InfrastructureCard should render correctly with data 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -786,12 +842,14 @@ exports[`InfrastructureCard should render correctly with data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -804,12 +862,14 @@ exports[`InfrastructureCard should render correctly with data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -872,60 +932,70 @@ exports[`InfrastructureCard should render correctly with rhsm facts 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 virtual
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 Not available
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
                 Not available
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
                 Not available
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -982,36 +1052,42 @@ exports[`InfrastructureCard should render enabled/disabled 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -1024,12 +1100,14 @@ exports[`InfrastructureCard should render enabled/disabled 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -1042,12 +1120,14 @@ exports[`InfrastructureCard should render enabled/disabled 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -1110,36 +1190,42 @@ exports[`InfrastructureCard should render extra 1`] = `
               class=""
             >
               <dt
+                aria-label="Type title"
                 class=""
                 data-ouia-component-id="Type title"
               >
                 Type
               </dt>
               <dd
+                aria-label="Type value"
                 class=""
                 data-ouia-component-id="Type value"
               >
                 test-type
               </dd>
               <dt
+                aria-label="Vendor title"
                 class=""
                 data-ouia-component-id="Vendor title"
               >
                 Vendor
               </dt>
               <dd
+                aria-label="Vendor value"
                 class=""
                 data-ouia-component-id="Vendor value"
               >
                 test-vendor
               </dd>
               <dt
+                aria-label="IPv4 addresses title"
                 class=""
                 data-ouia-component-id="IPv4 addresses title"
               >
                 IPv4 addresses
               </dt>
               <dd
+                aria-label="IPv4 addresses value"
                 class=""
                 data-ouia-component-id="IPv4 addresses value"
               >
@@ -1152,12 +1238,14 @@ exports[`InfrastructureCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="IPv6 addresses title"
                 class=""
                 data-ouia-component-id="IPv6 addresses title"
               >
                 IPv6 addresses
               </dt>
               <dd
+                aria-label="IPv6 addresses value"
                 class=""
                 data-ouia-component-id="IPv6 addresses value"
               >
@@ -1170,12 +1258,14 @@ exports[`InfrastructureCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Interfaces/NICs title"
                 class=""
                 data-ouia-component-id="Interfaces/NICs title"
               >
                 Interfaces/NICs
               </dt>
               <dd
+                aria-label="Interfaces/NICs value"
                 class=""
                 data-ouia-component-id="Interfaces/NICs value"
               >
@@ -1188,24 +1278,28 @@ exports[`InfrastructureCard should render extra 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="something title"
                 class=""
                 data-ouia-component-id="something title"
               >
                 something
               </dt>
               <dd
+                aria-label="something value"
                 class=""
                 data-ouia-component-id="something value"
               >
                 test
               </dd>
               <dt
+                aria-label="with click title"
                 class=""
                 data-ouia-component-id="with click title"
               >
                 with click
               </dt>
               <dd
+                aria-label="with click value"
                 class=""
                 data-ouia-component-id="with click value"
               >

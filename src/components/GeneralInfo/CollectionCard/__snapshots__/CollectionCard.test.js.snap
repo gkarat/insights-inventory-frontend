@@ -42,12 +42,14 @@ exports[`CollectionCard should render correctly - no data 1`] = `
               class=""
             >
               <dt
+                aria-label="Insights client title"
                 class=""
                 data-ouia-component-id="Insights client title"
               >
                 Insights client
               </dt>
               <dd
+                aria-label="Insights client value"
                 class=""
                 data-ouia-component-id="Insights client value"
               >
@@ -60,12 +62,14 @@ exports[`CollectionCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Last check-in title"
                 class=""
                 data-ouia-component-id="Last check-in title"
               >
                 Last check-in
               </dt>
               <dd
+                aria-label="Last check-in value"
                 class=""
                 data-ouia-component-id="Last check-in value"
               >
@@ -78,12 +82,14 @@ exports[`CollectionCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Registered title"
                 class=""
                 data-ouia-component-id="Registered title"
               >
                 Registered
               </dt>
               <dd
+                aria-label="Registered value"
                 class=""
                 data-ouia-component-id="Registered value"
               >
@@ -96,12 +102,14 @@ exports[`CollectionCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Insights id title"
                 class=""
                 data-ouia-component-id="Insights id title"
               >
                 Insights id
               </dt>
               <dd
+                aria-label="Insights id value"
                 class=""
                 data-ouia-component-id="Insights id value"
               >
@@ -114,12 +122,14 @@ exports[`CollectionCard should render correctly - no data 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="Reporter title"
                 class=""
                 data-ouia-component-id="Reporter title"
               >
                 Reporter
               </dt>
               <dd
+                aria-label="Reporter value"
                 class=""
                 data-ouia-component-id="Reporter value"
               >
@@ -182,12 +192,14 @@ exports[`CollectionCard should render correctly with data 1`] = `
               class=""
             >
               <dt
+                aria-label="Insights client title"
                 class=""
                 data-ouia-component-id="Insights client title"
               >
                 Insights client
               </dt>
               <dd
+                aria-label="Insights client value"
                 class=""
                 data-ouia-component-id="Insights client value"
               >
@@ -196,48 +208,56 @@ exports[`CollectionCard should render correctly with data 1`] = `
                 </span>
               </dd>
               <dt
+                aria-label="Last check-in title"
                 class=""
                 data-ouia-component-id="Last check-in title"
               >
                 Last check-in
               </dt>
               <dd
+                aria-label="Last check-in value"
                 class=""
                 data-ouia-component-id="Last check-in value"
               >
                 01 Jun 2014
               </dd>
               <dt
+                aria-label="Registered title"
                 class=""
                 data-ouia-component-id="Registered title"
               >
                 Registered
               </dt>
               <dd
+                aria-label="Registered value"
                 class=""
                 data-ouia-component-id="Registered value"
               >
                 01 Apr 2014
               </dd>
               <dt
+                aria-label="Insights id title"
                 class=""
                 data-ouia-component-id="Insights id title"
               >
                 Insights id
               </dt>
               <dd
+                aria-label="Insights id value"
                 class=""
                 data-ouia-component-id="Insights id value"
               >
                 Not available
               </dd>
               <dt
+                aria-label="Reporter title"
                 class=""
                 data-ouia-component-id="Reporter title"
               >
                 Reporter
               </dt>
               <dd
+                aria-label="Reporter value"
                 class=""
                 data-ouia-component-id="Reporter value"
               >
@@ -294,12 +314,14 @@ exports[`CollectionCard should render extra 1`] = `
               class=""
             >
               <dt
+                aria-label="Insights client title"
                 class=""
                 data-ouia-component-id="Insights client title"
               >
                 Insights client
               </dt>
               <dd
+                aria-label="Insights client value"
                 class=""
                 data-ouia-component-id="Insights client value"
               >
@@ -308,72 +330,84 @@ exports[`CollectionCard should render extra 1`] = `
                 </span>
               </dd>
               <dt
+                aria-label="Last check-in title"
                 class=""
                 data-ouia-component-id="Last check-in title"
               >
                 Last check-in
               </dt>
               <dd
+                aria-label="Last check-in value"
                 class=""
                 data-ouia-component-id="Last check-in value"
               >
                 01 Jun 2014
               </dd>
               <dt
+                aria-label="Registered title"
                 class=""
                 data-ouia-component-id="Registered title"
               >
                 Registered
               </dt>
               <dd
+                aria-label="Registered value"
                 class=""
                 data-ouia-component-id="Registered value"
               >
                 01 Apr 2014
               </dd>
               <dt
+                aria-label="Insights id title"
                 class=""
                 data-ouia-component-id="Insights id title"
               >
                 Insights id
               </dt>
               <dd
+                aria-label="Insights id value"
                 class=""
                 data-ouia-component-id="Insights id value"
               >
                 Not available
               </dd>
               <dt
+                aria-label="Reporter title"
                 class=""
                 data-ouia-component-id="Reporter title"
               >
                 Reporter
               </dt>
               <dd
+                aria-label="Reporter value"
                 class=""
                 data-ouia-component-id="Reporter value"
               >
                 Not available
               </dd>
               <dt
+                aria-label="something title"
                 class=""
                 data-ouia-component-id="something title"
               >
                 something
               </dt>
               <dd
+                aria-label="something value"
                 class=""
                 data-ouia-component-id="something value"
               >
                 test
               </dd>
               <dt
+                aria-label="with click title"
                 class=""
                 data-ouia-component-id="with click title"
               >
                 with click
               </dt>
               <dd
+                aria-label="with click value"
                 class=""
                 data-ouia-component-id="with click value"
               >

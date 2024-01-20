@@ -144,12 +144,14 @@ exports[`LoadingCard Loading card render 1`] = `
               class=""
             >
               <dt
+                aria-label="test-title title"
                 class=""
                 data-ouia-component-id="test-title title"
               >
                 test-title
               </dt>
               <dd
+                aria-label="test-title value"
                 class=""
                 data-ouia-component-id="test-title value"
               >
@@ -162,12 +164,14 @@ exports[`LoadingCard Loading card render 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="just title title"
                 class=""
                 data-ouia-component-id="just title title"
               >
                 just title
               </dt>
               <dd
+                aria-label="just title value"
                 class=""
                 data-ouia-component-id="just title value"
               >
@@ -224,12 +228,14 @@ exports[`LoadingCard should render loading bars 1`] = `
               class=""
             >
               <dt
+                aria-label="test-title title"
                 class=""
                 data-ouia-component-id="test-title title"
               >
                 test-title
               </dt>
               <dd
+                aria-label="test-title value"
                 class=""
                 data-ouia-component-id="test-title value"
               >
@@ -242,12 +248,14 @@ exports[`LoadingCard should render loading bars 1`] = `
                 </div>
               </dd>
               <dt
+                aria-label="just title title"
                 class=""
                 data-ouia-component-id="just title title"
               >
                 just title
               </dt>
               <dd
+                aria-label="just title value"
                 class=""
                 data-ouia-component-id="just title value"
               >
