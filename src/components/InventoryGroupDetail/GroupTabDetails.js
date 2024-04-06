@@ -6,7 +6,7 @@ import {
   TabTitleText,
   Tabs,
 } from '@patternfly/react-core';
-import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
+import React, { Suspense, lazy, useMemo, useRef, useState } from 'react';
 import { hybridInventoryTabKeys } from '../../Utilities/constants';
 import GroupSystems from '../GroupSystems/GroupSystems';
 import GroupImmutableSystems from '../GroupSystems/GroupImmutableSystems';
@@ -28,7 +28,10 @@ const GroupTabDetailsWrapper = ({
   const { hasAccess: canViewHosts } = usePermissionsWithContext(
     REQUIRED_PERMISSIONS_TO_READ_GROUP_HOSTS(groupId)
   );
-  const conventionalSystemsContent = useMemo(
+
+  const [activeTabKey, setActiveTabKey] = useState(0);
+
+  const Tab1Table = useMemo(
     () => (
       <GroupSystems
         groupName={groupName}
@@ -36,10 +39,10 @@ const GroupTabDetailsWrapper = ({
         hostType={hybridInventoryTabKeys.conventional.key}
       />
     ),
-    [groupId, groupName]
+    []
   );
 
-  const immutableSystemsContent = useMemo(
+  const Tab2Table = useMemo(
     () => (
       <GroupImmutableSystems
         groupId={groupId}
@@ -47,28 +50,8 @@ const GroupTabDetailsWrapper = ({
         hostType={hybridInventoryTabKeys.immutable.key}
       />
     ),
-    [groupId, groupName]
+    []
   );
-
-  const [component, setComponent] = useState(conventionalSystemsContent);
-
-  useEffect(() => {
-    if (activeTab === hybridInventoryTabKeys.conventional.key) {
-      setComponent(conventionalSystemsContent);
-    } else {
-      setComponent(immutableSystemsContent);
-    }
-  }, [activeTab]);
-  const handleTabClick = (_event, tabIndex) => {
-    setTab(tabIndex);
-    if (tabIndex === hybridInventoryTabKeys.conventional.key) {
-      setComponent(conventionalSystemsContent);
-    } else {
-      setComponent(immutableSystemsContent);
-    }
-  };
-
-  const [activeTabKey, setActiveTabKey] = useState(0);
 
   return (
     <Tabs
@@ -86,20 +69,22 @@ const GroupTabDetailsWrapper = ({
             <Tabs
               className="pf-m-light pf-v5-c-table"
               activeKey={activeTab && tab == 0 ? activeTab : tab}
-              onSelect={handleTabClick}
+              onSelect={(_event, tabIndex) => {
+                setTab(tabIndex);
+              }}
               aria-label="Hybrid inventory tabs"
             >
               <Tab
                 eventKey={hybridInventoryTabKeys.conventional.key}
                 title={<TabTitleText>Conventional (RPM-DNF)</TabTitleText>}
               >
-                {component}
+                {tab === hybridInventoryTabKeys.conventional.key && Tab1Table}
               </Tab>
               <Tab
                 eventKey={hybridInventoryTabKeys.immutable.key}
                 title={<TabTitleText>Immutable (OSTree)</TabTitleText>}
               >
-                {component}
+                {tab === hybridInventoryTabKeys.immutable.key && Tab2Table}
               </Tab>
             </Tabs>
           ) : canViewHosts ? (

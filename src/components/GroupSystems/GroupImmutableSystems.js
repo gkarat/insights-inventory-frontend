@@ -1,7 +1,7 @@
 import { TableVariant } from '@patternfly/react-table';
 import PropTypes from 'prop-types';
-import React, { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import AddSystemsToGroupModal from '../InventoryGroups/Modals/AddSystemsToGroupModal';
 import InventoryTable from '../InventoryTable/InventoryTable';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -30,6 +30,7 @@ import {
 import { edgeColumns } from '../ImmutableDevices/columns';
 import { mergeArraysByKey } from '@redhat-cloud-services/frontend-components-utilities/helpers';
 import { hybridInventoryTabKeys } from '../../Utilities/constants';
+import { getStore } from '../../store';
 export const prepareColumns = (
   initialColumns,
   hideGroupColumn,
@@ -76,6 +77,11 @@ const GroupImmutableSystems = ({ groupName, groupId, ...props }) => {
     );
     return [...filteredColumns, ...edgeColumns];
   };
+
+  const count = useRef(0);
+
+  count.current++;
+  console.log('###', count.current);
 
   const navigate = useNavigate();
   const canUpdateSelectedDevices = (deviceIds, imageSets, updatableDeviceIds) =>
@@ -206,42 +212,9 @@ const GroupImmutableSystems = ({ groupName, groupId, ...props }) => {
     }
   }, [deviceData, selected, deviceImageSet]);
 
-  return (
-    <div id="group-systems-table">
-      {addToGroupModalOpen && (
-        <AddSystemsToGroupModal
-          isModalOpen={addToGroupModalOpen}
-          setIsModalOpen={(value) => {
-            dispatch(clearEntitiesAction());
-            setAddToGroupModalOpen(value);
-          }}
-          groupId={groupId}
-          groupName={groupName}
-          edgeParityIsAllowed={true}
-          activeTab={hybridInventoryTabKeys.immutable.key}
-        />
-      )}
-      {removeHostsFromGroupModalOpen && (
-        <RemoveHostsFromGroupModal
-          isModalOpen={removeHostsFromGroupModalOpen}
-          setIsModalOpen={setRemoveHostsFromGroupModalOpen}
-          modalState={currentSystem}
-        />
-      )}
-      {updateDevice && (
-        <AsyncComponent
-          appName="edge"
-          module="./UpdateDeviceModal"
-          navigateProp={useNavigate}
-          locationProp={useLocation}
-          notificationProp={notificationProp}
-          paramsProp={useParams}
-          updateModal={updateModal}
-          setUpdateModal={setUpdateModal}
-          refreshTable={() => true}
-        />
-      )}
-      {!addToGroupModalOpen && (
+  const InvTable = useMemo(
+    () => (
+      <Provider store={getStore()}>
         <InventoryTable
           columns={(columns) => mergeColumns(prepareColumns(columns))}
           hideFilters={{ hostGroupFilter: true }}
@@ -347,7 +320,47 @@ const GroupImmutableSystems = ({ groupName, groupId, ...props }) => {
           showCentosVersions
           {...props}
         />
+      </Provider>
+    ),
+    []
+  );
+
+  return (
+    <div id="group-systems-table">
+      {addToGroupModalOpen && (
+        <AddSystemsToGroupModal
+          isModalOpen={addToGroupModalOpen}
+          setIsModalOpen={(value) => {
+            dispatch(clearEntitiesAction());
+            setAddToGroupModalOpen(value);
+          }}
+          groupId={groupId}
+          groupName={groupName}
+          edgeParityIsAllowed={true}
+          activeTab={hybridInventoryTabKeys.immutable.key}
+        />
       )}
+      {removeHostsFromGroupModalOpen && (
+        <RemoveHostsFromGroupModal
+          isModalOpen={removeHostsFromGroupModalOpen}
+          setIsModalOpen={setRemoveHostsFromGroupModalOpen}
+          modalState={currentSystem}
+        />
+      )}
+      {updateDevice && (
+        <AsyncComponent
+          appName="edge"
+          module="./UpdateDeviceModal"
+          navigateProp={useNavigate}
+          locationProp={useLocation}
+          notificationProp={notificationProp}
+          paramsProp={useParams}
+          updateModal={updateModal}
+          setUpdateModal={setUpdateModal}
+          refreshTable={() => true}
+        />
+      )}
+      {!addToGroupModalOpen && InvTable}
     </div>
   );
 };
